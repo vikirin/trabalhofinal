@@ -230,6 +230,7 @@ public class CardapioClienteController implements Initializable {
 
         for (pizza p : pizzaList){
             posicao= posicao+1;
+            proximos = 4;
             if (listaPizza == 1){
                 nomepizza1.setText(p.getNomeProduto());
                 valorPizza1.setText(p.getValor().toString());
@@ -260,7 +261,6 @@ public class CardapioClienteController implements Initializable {
                             imagemPizza4.setImage(new Image(p.getImagem().toString()));
                             pizza4.setOpacity(100);
                             idpizza4=p.getIdPizza();
-                            proximos = 4;
                             listaPizza = listaPizza + 1;
                         }
                     }
@@ -270,8 +270,7 @@ public class CardapioClienteController implements Initializable {
 
 
         proximo.setOnMouseClicked((event)->{
-            System.out.println("pro "+proximos+" pos"+posicao);
-            if (proximos+1<posicao) {
+            if (proximos<posicao) {
                 listaPizza =0;
                 proximos = proximos+4;
                 nomepizza1.setText(null);
@@ -291,6 +290,7 @@ public class CardapioClienteController implements Initializable {
                 imagemPizza4.setImage(null);
                 pizza4.setOpacity(0);
                 for (pizza p : pizzaList) {
+                    listaPizza = listaPizza + 1;
                     if (listaPizza == proximos - 3) {
                         nomepizza1.setText(p.getNomeProduto());
                         valorPizza1.setText(p.getValor().toString());
@@ -322,7 +322,6 @@ public class CardapioClienteController implements Initializable {
                             }
                         }
                     }
-                    listaPizza = listaPizza + 1;
                 }
             }
         });

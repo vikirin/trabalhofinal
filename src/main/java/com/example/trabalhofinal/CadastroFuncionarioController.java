@@ -18,6 +18,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.security.NoSuchAlgorithmException;
 import java.util.ResourceBundle;
+import java.util.regex.Pattern;
 
 public class CadastroFuncionarioController implements Initializable {
 
@@ -62,7 +63,9 @@ public class CadastroFuncionarioController implements Initializable {
 
     @FXML
     private PasswordField textSenha;
-
+    public static boolean verificarStringNumerica(String testeCPF) {
+        return Pattern.matches("[0-9]+",testeCPF);
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         botaoCadastrar.setOnMouseClicked((event)->{
@@ -73,18 +76,32 @@ public class CadastroFuncionarioController implements Initializable {
             erroCPF.setText(null);
             erroSenha.setText(null);
             erroConfirmarSenha.setText(null);
+
             int criar = 0;
+            if (textCPF.getText().isEmpty()){
+                erroCPF.setText("Colocar o CPF!");
+                criar = 1;
+            }else {
+                int com=0;
+                String teste = textCPF.getText();
+                if(11 == teste.length()){
+                    if (verificarStringNumerica(teste)==true){
+                        funcionario.setCPF(textCPF.getText());
+                    }else {
+                        erroCPF.setText("CPF não pode ter letras");
+                        criar = 1;
+                    }
+                }else {
+                    erroCPF.setText("CPF do tamanho errado");
+                    criar = 1;
+                }
+
+            }
             if (textNome.getText().isEmpty()){
                 erroNome.setText("Colocar o Nome!");
                 criar = 1;
             }else {
                  funcionario.setNome(textNome.getText());
-            }
-            if (textCPF.getText().isEmpty()){
-                erroCPF.setText("Colocar o CPF!");
-                criar = 1;
-            }else {
-                funcionario.setCPF(textCPF.getText());
             }
             if (textSenha.getText().isEmpty()){
                 erroSenha.setText("Colocar a Senha!");
@@ -100,7 +117,6 @@ public class CadastroFuncionarioController implements Initializable {
                     } catch (UnsupportedEncodingException e) {
                         throw new RuntimeException(e);
                     }
-                    System.out.println(criarSenha.getSenhahex());
                     funcionario.setSenha(criarSenha.getSenhahex());
                 }else {
                     erroConfirmarSenha.setText("Senhas não iguais!");

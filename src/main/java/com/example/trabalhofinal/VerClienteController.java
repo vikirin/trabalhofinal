@@ -1,7 +1,7 @@
 package com.example.trabalhofinal;
 
 import dao.ClienteDAO;
-import jasper.jaspercontrollercliente;
+import jasper.jaspercontrollerpedidosfinal;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -70,7 +70,7 @@ public class VerClienteController implements Initializable {
             PrincipalVerCliente.getStage().close();
         });
         botaoDeletar.setOnMouseClicked((event)->{
-            jaspercontrollercliente jaspercontrollercliente = new jaspercontrollercliente();
+            jaspercontrollerpedidosfinal jaspercontrollercliente = new jaspercontrollerpedidosfinal();
             try {
                 jaspercontrollercliente.gerarRelatorio();
             } catch (JRException e) {
@@ -103,13 +103,8 @@ public class VerClienteController implements Initializable {
             }
         });
 
-        /*gerar.setOnMouseClicked((event)->{
-            jaspercontrollercliente controller=new jaspercontrollercliente();
-            try {
-                controller.gerarRelatorio();
-            } catch (JRException e) {
-                throw new RuntimeException(e);
-            }
-        });*/
+
+
+
     }
 }

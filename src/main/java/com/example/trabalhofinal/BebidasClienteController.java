@@ -263,6 +263,7 @@ public class BebidasClienteController implements Initializable {
 
         for(bebida b : bebidaList){
             posicao= posicao+1;
+            proximos = 4;
             if (listabebida == 1){
                 nomebebida1.setText(b.getNomeProduto());
                 valor1.setText(b.getValor().toString());
@@ -309,18 +310,14 @@ public class BebidasClienteController implements Initializable {
                             quntidade4.setText("0");
                             retangulo4.setOpacity(100);
                             idbebida4 = b.getIdBebida();
-                            proximos = 4;
                             listabebida =listabebida + 1;
                         }
                     }
                 }
             }
         }
-
         proximo.setOnMouseClicked((event)->{
-
-
-            if (proximos+1<posicao) {
+            if (proximos<posicao) {
                 listabebida = 0;
                 proximos = proximos+4;
                 nomebebida1.setText(null);
@@ -361,6 +358,7 @@ public class BebidasClienteController implements Initializable {
 
 
                 for (bebida b : bebidaList) {
+                    listabebida = listabebida + 1;
                     if (listabebida == proximos - 3) {
                         nomebebida1.setText(b.getNomeProduto());
                         valor1.setText(b.getValor().toString());
@@ -371,6 +369,7 @@ public class BebidasClienteController implements Initializable {
                         quntidade1.setText("0");
                         retangulo1.setOpacity(100);
                         idbebida1 = b.getIdBebida();
+
                     } else {
                         if (listabebida == proximos - 2) {
                             nomebebida2.setText(b.getNomeProduto());
@@ -382,6 +381,7 @@ public class BebidasClienteController implements Initializable {
                             quntidade2.setText("0");
                             retangulo2.setOpacity(100);
                             idbebida2 = b.getIdBebida();
+
                         } else {
                             if (listabebida == proximos - 1) {
                                 nomebebida3.setText(b.getNomeProduto());
@@ -393,6 +393,7 @@ public class BebidasClienteController implements Initializable {
                                 quntidade3.setText("0");
                                 retangulo3.setOpacity(100);
                                 idbebida3 = b.getIdBebida();
+
                             } else {
                                 if (listabebida == proximos) {
                                     nomebebida4.setText(b.getNomeProduto());
@@ -408,7 +409,7 @@ public class BebidasClienteController implements Initializable {
                             }
                         }
                     }
-                    listabebida = listabebida + 1;
+
                 }
             }
         });

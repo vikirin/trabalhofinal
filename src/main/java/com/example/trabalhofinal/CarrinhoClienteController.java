@@ -171,6 +171,13 @@ public class CarrinhoClienteController implements Initializable {
                     pre_PedidobebidaDAO.delete(b.getIdpedido());
                 }
             }*/
+            PrincipalCarrinhoCliente principalCarrinhoCliente = new PrincipalCarrinhoCliente();
+            PrincipalCarrinhoCliente.getStage().close();
+            try{
+                principalCarrinhoCliente.start(new Stage());
+            }catch(Exception e){
+
+            }
         });
 
         botaoVoltar.setOnMouseClicked((event)->{
