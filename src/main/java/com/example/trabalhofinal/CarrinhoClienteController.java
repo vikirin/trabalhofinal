@@ -154,13 +154,13 @@ public class CarrinhoClienteController implements Initializable {
                     pre_PedidobebidafinalDAO.create(prePedidobebidafinal);
                 }
             }
-            jaspercontroller controller;
+           /* jaspercontroller controller;
             controller =new jaspercontroller();
             try {
                 controller.gerarRelatorio();
             } catch (JRException e) {
                 throw new RuntimeException(e);
-            }
+            }*/
             /*for (pre_pedidopizza p : prePedidopizzaList){
                 if (p.getIdcliente()==LoginClienteController.getIdcliente()) {
                     pre_PedidopizzaDAO.delete(p.getIdPedido());
