@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="painelPrincipal" prefHeight="700.0" prefWidth="1188.0" style="-fx-background-radius: 20px;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhofinal.BebidasClienteController">
+   <children>
+      <AnchorPane fx:id="retanguloMaior" prefHeight="121.0" prefWidth="1332.0" style="-fx-background-color: #FFA500; -fx-background-radius: 20px;">
+         <children>
+            <AnchorPane fx:id="quadradoBebidaMaior" layoutX="740.0" layoutY="29.0" prefHeight="41.0" prefWidth="40.0" style="-fx-background-color: #BB5419;" />
+            <ImageView fx:id="imagemVoltar" fitHeight="50.0" fitWidth="27.0" layoutX="551.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:///C:/Users/Computador/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/voltar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imagemPizza" fitHeight="45.0" fitWidth="27.0" layoutX="653.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:///C:/Users/Computador/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/fatiaP.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imagemBebida" fitHeight="27.0" fitWidth="27.0" layoutX="746.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:///C:/Users/Computador/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/taça.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="botaoVoltar" layoutX="539.0" layoutY="38.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="51.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="botaoPizza" layoutX="641.0" layoutY="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="51.0" style="-fx-background-color: transparent;" />
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="imagemBebidas" fitHeight="271.0" fitWidth="730.0" layoutX="332.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:///C:/Users/Computador/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/bebidasBanner.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="quadradoBebe" layoutX="432.0" layoutY="284.0" prefHeight="74.0" prefWidth="118.0" style="-fx-background-color: white; -fx-background-radius: 20px;" />
+      <ImageView fx:id="imagemBebe" fitHeight="51.0" fitWidth="89.0" layoutX="447.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:///C:/Users/Computador/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/bebe.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="retanguloTitulo" layoutX="537.0" layoutY="293.0" prefHeight="57.0" prefWidth="332.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+         <children>
+            <Label fx:id="tituloLabel" layoutX="20.0" layoutY="15.0" text="Bebidas 4 Pizzaria Plus!">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="retanguloCarrinho" layoutX="1048.0" layoutY="180.0" prefHeight="284.0" prefWidth="210.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+         <children>
+            <Button fx:id="botaoCaarrinho" layoutX="19.0" layoutY="233.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: #FFA500; -fx-background-radius: 15px;" text="Carinho" textFill="WHITE" />
+            <Label fx:id="carrinhoLabel" layoutX="72.0" layoutY="15.0" text="Carrinho">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imagemBolsa" fitHeight="115.0" fitWidth="114.0" layoutX="51.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:///C:/Users/Computador/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/bolsa.png" />
+               </image>
+            </ImageView>
+            <Line fx:id="linhaCarrinho" endX="100.0" layoutX="109.0" layoutY="44.0" startX="-100.0" />
+            <Circle fx:id="ciruculo" fill="#fc0000" layoutX="155.0" layoutY="80.0" radius="10.0" stroke="RED" strokeType="INSIDE" />
+         </children>
+      </AnchorPane>
+      <Line fx:id="linhaCentral" endX="854.0" layoutX="162.0" layoutY="373.0" startX="-100.0" />
+      <Button fx:id="botaoEnviarPedido" layoutX="1049.0" layoutY="548.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: green; -fx-background-radius: 15px;" text="Enviar Pedido" textFill="WHITE" />
+      <AnchorPane fx:id="retangulo1" layoutX="230.0" layoutY="422.0" prefHeight="83.0" prefWidth="319.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+         <children>
+            <ImageView fx:id="imagembebida1" fitHeight="64.0" fitWidth="64.0" layoutX="10.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:///C:/Users/Computador/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/coca1.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nomebebida1" layoutX="84.0" layoutY="13.0" text="Coca-Cola 1L">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="valor1" layoutX="266.0" layoutY="54.0" text="R$8,50">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="bebida1" layoutX="290.0" layoutY="14.0" mnemonicParsing="false" />
+            <Label fx:id="quntidade1" alignment="CENTER" layoutX="117.0" layoutY="45.0" prefHeight="18.0" prefWidth="7.0" text="0" />
+            <Button fx:id="mais1" layoutX="133.0" layoutY="42.0" mnemonicParsing="false" style="-fx-background-color: #ffa500;" text="+" textFill="WHITE" />
+            <Button fx:id="menos1" layoutX="84.0" layoutY="42.0" mnemonicParsing="false" style="-fx-background-color: #ffa500;" text="-" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="retangulo2" layoutX="582.0" layoutY="422.0" prefHeight="83.0" prefWidth="319.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+         <children>
+            <ImageView fx:id="imagembebida2" fitHeight="64.0" fitWidth="64.0" layoutX="11.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:///C:/Users/Computador/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/coca2.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nomebebida2" layoutX="85.0" layoutY="13.0" text="Coca-Cola 2L">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="valor2" layoutX="259.0" layoutY="54.0" text="R$10,00">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="bebida2" layoutX="290.0" layoutY="14.0" mnemonicParsing="false" />
+            <Label fx:id="quntidade2" layoutX="117.0" layoutY="46.0" text="0" />
+            <Button fx:id="mais2" layoutX="129.0" layoutY="42.0" mnemonicParsing="false" style="-fx-background-color: #ffa500;" text="+" textFill="WHITE" />
+            <Button fx:id="menos2" layoutX="84.0" layoutY="42.0" mnemonicParsing="false" style="-fx-background-color: #ffa500;" text="-" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="retangulo3" layoutX="230.0" layoutY="548.0" prefHeight="83.0" prefWidth="319.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+         <children>
+            <ImageView fx:id="imagembebida3" fitHeight="64.0" fitWidth="101.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:///C:/Users/Computador/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/sucoLaran.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nomebebida3" layoutX="84.0" layoutY="12.0" text="Suco de Laranja">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="valor3" layoutX="259.0" layoutY="54.0" text="R$15,00">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="bebida3" layoutX="290.0" layoutY="14.0" mnemonicParsing="false" />
+            <Label fx:id="quntidade3" layoutX="117.0" layoutY="46.0" text="0" />
+            <Button fx:id="mais3" layoutX="134.0" layoutY="42.0" mnemonicParsing="false" style="-fx-background-color: #ffa500;" text="+" textFill="WHITE" />
+            <Button fx:id="menos3" layoutX="84.0" layoutY="42.0" mnemonicParsing="false" style="-fx-background-color: #ffa500;" text="-" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="retangulo4" layoutX="582.0" layoutY="548.0" prefHeight="83.0" prefWidth="319.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+         <children>
+            <ImageView fx:id="imagembebida4" fitHeight="64.0" fitWidth="101.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:///C:/Users/Computador/OneDrive%20-%20Sociedade%20Goiana%20de%20Cultura/sucoLima.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nomebebida4" layoutX="84.0" layoutY="12.0" text="Suco de Limão">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="valor4" layoutX="259.0" layoutY="54.0" text="R$12,00">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="bebida4" layoutX="290.0" layoutY="14.0" mnemonicParsing="false" />
+            <Label fx:id="quntidade4" layoutX="117.0" layoutY="47.0" text="0" />
+            <Button fx:id="mais4" layoutX="132.0" layoutY="43.0" mnemonicParsing="false" style="-fx-background-color: #ffa500;" text="+" textFill="WHITE" />
+            <Button fx:id="menos4" layoutX="84.0" layoutY="43.0" mnemonicParsing="false" style="-fx-background-color: #ffa500;" text="-" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="proximo" layoutX="76.0" layoutY="439.0" mnemonicParsing="false" style="-fx-background-color: #ffa500;" text="Próximo" textFill="WHITE" />
+      <Button fx:id="anterior" layoutX="76.0" layoutY="493.0" mnemonicParsing="false" style="-fx-background-color: #ffa500;" text="Anterior" textFill="WHITE" />
+   </children>
+</AnchorPane>
